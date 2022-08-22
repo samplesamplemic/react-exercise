@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 class HelloWorld extends React.Component {
@@ -8,4 +6,4 @@ class HelloWorld extends React.Component {
     }
 }
 export {HelloWorld};
->>>>>>> components-02
+
