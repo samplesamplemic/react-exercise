@@ -5,7 +5,6 @@ export class Hello extends React.Component {
     return (
         <>
         <h1 className="text-3xl font-bold">Hello, World!</h1>
-        <p className="text-xl">What a beautiful day</p>
         </>
     );
       
@@ -13,10 +12,21 @@ export class Hello extends React.Component {
 }
 //export {Hello};
 
-const App = () => {
+const Message = () => {
+    return ( 
+        <p className="text-xl">What a beautiful day</p>
+        
+     );
+}
+ 
+
+
+ const App = () => 
+{
   return (
     <div className="flex justify-center flex-col items-center">
       <Hello />
+      <Message />
     </div>
   );
 };
