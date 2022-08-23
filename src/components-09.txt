@@ -1,0 +1,3 @@
+Can you render the Message component directly within the App component? What happens if you do?
+
+ANSWER: yes, you can render Message component within App component. This way the component will normally be rendered in the DOM;
