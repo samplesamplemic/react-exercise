@@ -1,0 +1,3 @@
+Can you use the Hello component more than once in the App component? What happens if you do?
+
+ANSWER: yes, you can use components more than once. The component will be rendered as many times as you passed it.
