@@ -27,7 +27,6 @@ const Message = () => {
   return (
     <div className="flex justify-center flex-col items-center">
       <Hello />
-      <Message />
      </div>
   );
 };
