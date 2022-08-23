@@ -1,25 +1,7 @@
 import React from "react";
+import Hello  from './components';
+import Welcome from "./props";
 
-export class Hello extends React.Component {
-  render() {
-    return (
-        <>
-        <h1 className="text-3xl font-bold">Hello, World!</h1>
-        <Message />
-        </>
-    );
-      
-  }
-}
-//export {Hello};
-
-const Message = () => {
-    return ( 
-        <p className="text-xl">What a beautiful day</p>
-        
-     );
-}
- 
 
 
  const App = () => 
@@ -27,6 +9,7 @@ const Message = () => {
   return (
     <div className="flex justify-center flex-col items-center">
       <Hello />
+      <Welcome name="everyone" />
      </div>
   );
 };
