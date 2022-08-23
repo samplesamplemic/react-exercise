@@ -1,6 +1,6 @@
 import React from "react";
 import Hello  from './components/components';
-import Welcome from "./props/props";
+import { Welcome, Age } from "./props/props";
 
 const myname = <strong>Mic</strong>
 
@@ -9,9 +9,10 @@ const myname = <strong>Mic</strong>
   return (
     <div className="flex justify-center flex-col items-center">
       <Hello />
-      <Welcome name = {myname} />
-     </div>
+      <Welcome name = {myname} age = {25}/>
+    </div>
   );
 };
 
 export default App;
+

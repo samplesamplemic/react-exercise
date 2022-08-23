@@ -1,8 +1,8 @@
-const Welcome = (props) => {
+export const Welcome = (props) => {
     return (
         <>
-             <p className="text-l flex items-center">Welcome, {props.name}!</p>
-             <p className="text-l flex items-center">Your age is {props.age}</p>
+            <p className="text-l flex items-center">Welcome, {props.name}!</p>
+            <Age age = {props.age} />
         </>
        
     )
@@ -10,7 +10,16 @@ const Welcome = (props) => {
  
 Welcome.defaultProps = {
     name: <strong>SamSample</strong>,
-    age:25
 };
 
-export default Welcome;
+export const Age = (props) => {
+    return ( 
+        <>
+            <p className="text-l flex items-center">Your age is {props.age}</p>
+       
+        </>
+     );
+}
+ 
+
+
