@@ -1,0 +1,3 @@
+What happens if the name prop is a JSX expression instead of a string? How do you pass a prop that contains a JSX expression?
+
+ANSWER: In this case the prop must be embedded in curly brackets.

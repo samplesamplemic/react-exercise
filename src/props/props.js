@@ -9,7 +9,7 @@ const Welcome = (props) => {
 }
  
 Welcome.defaultProps = {
-    name: "everyone",
+    name: <strong>SamSample</strong>,
     age:25
 };
 
