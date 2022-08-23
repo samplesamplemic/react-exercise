@@ -1,0 +1,3 @@
+What happens if no name prop is passed to the Welcome component? Can you set a default value for the name prop?
+
+ANSWER:  The component will still be render, without name prop. Yes, like this: Component.defaultProps = {name: "everyone"};

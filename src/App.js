@@ -1,6 +1,6 @@
 import React from "react";
-import Hello  from './components';
-import Welcome from "./props";
+import Hello  from './components/components';
+import Welcome from "./props/props";
 
 
 
@@ -9,7 +9,7 @@ import Welcome from "./props";
   return (
     <div className="flex justify-center flex-col items-center">
       <Hello />
-      <Welcome name="everyone" />
+      <Welcome />
      </div>
   );
 };

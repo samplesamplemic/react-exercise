@@ -4,4 +4,8 @@ const Welcome = (props) => {
     )
 }
  
+Welcome.defaultProps = {
+    name: "everyone"
+};
+
 export default Welcome;
