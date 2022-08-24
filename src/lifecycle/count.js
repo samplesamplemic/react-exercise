@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 
 //class solution
 export default class Counter extends React.Component {
-  state = { count: this.props.initialValue ?? 0 };
+  
+ state = { count: this.props.initialValue ?? 0 };
 
-  constructor(props) {
-    super(props);
+  //lifecycle-01 
+  componentDidMount() {
     setInterval(() => {
       this.setState((state) => {
         if (this.state.count === 10) {
@@ -20,16 +21,15 @@ export default class Counter extends React.Component {
         }
       });
     }, this.props.incrementInterval ?? 1000);
+    console.log(this.state.count);
   }
+    
+  
 
   render() {
     return (
       <>
-        {/* {this.state.count < (this.props.initialValue*10) 
-            ?<CounterDisplay count ={this.state.count}/>
-            :<CounterDisplay count = {this.props.initialValue}/>
-             } */}
-        <CounterDisplay count={this.state.count} />
+       <CounterDisplay count={this.state.count} />
       </>
     );
   }

@@ -1,7 +1,8 @@
 import React from "react";
 import Hello  from './components/components';
 import { Welcome, Age } from "./props/props";
-import Counter from "./state/count";
+//import Counter from "./state/count";
+import Counter from "./lifecycle/count";
 
 const myname = <strong>Mic</strong>
 

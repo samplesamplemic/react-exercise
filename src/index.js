@@ -6,9 +6,9 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-    <StrictMode>
+   // <StrictMode> //removed for unwanted double call with componentDidMount();
          <App />
-    </StrictMode>
+   // </StrictMode>
    
 );
 
