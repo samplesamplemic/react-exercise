@@ -11,7 +11,7 @@ const myname = <strong>Mic</strong>
     <div className="flex justify-center flex-col items-center">
       <Hello />
       <Welcome name = {myname} age = {25}/>
-      <Counter initialValue={2} incrementAmount={0.5} incrementInterval={2000} />
+      <Counter initialValue={1} incrementAmount={1} incrementInterval={500} />
     </div>
   );
 };

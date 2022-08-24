@@ -8,18 +8,32 @@ export default class Counter extends React.Component {
 
     constructor(props) {
         super(props)
-        setInterval(() => {
+      setInterval(() => {
             this.setState((state) => {
-                return {
+                if(this.state.count === 10){  //state-05 ex
+                    return {
+                      count: this.props.initialValue
+                    }
+                  } else {
+                    return {
+                    
                     count: state.count + (this.props.incrementAmount ?? 1),
                 }
+                  }
+                
             })
-        }, this.props.incrementInterval ?? 1000)
+        }, this.props.incrementInterval ?? 1000);
+        
     }
+     
 
     render() {
         return (
             <>
+            {/* {this.state.count < (this.props.initialValue*10) 
+            ?<CounterDisplay count ={this.state.count}/>
+            :<CounterDisplay count = {this.props.initialValue}/>
+             } */}
             <CounterDisplay count ={this.state.count}/>
            </>
         )
@@ -40,21 +54,27 @@ export { CounterDisplay };
 
 
 //standard solution
-// const Count = () => {  
-//     const [count, setCount] = useState(0);
+// const Counter = (props) => {  
+//     const [count, setCount] = useState(props.initialValue);
     
-//     useEffect(() => {
+//    useEffect(() => {
 //         const interval = setInterval(() => {
-//             setCount((count) => count+1);
-//         }, 1000);
+//             setCount((count) => count+ props.incrementAmount);
+//         }, props.incrementInterval);
 //         return () => clearInterval(interval);
 //     }, [])
-   
-//     return ( 
+    
+//          useEffect(() => {
+//             if(count === (props.incrementAmount*10)){
+//                 setCount(props.initialValue);
+//             }
+//          }, [count]);
+    
+//         return ( 
 //        <>
-//         <h1>{count}</h1>
+//         {count}
 //        </>
 //      );
 // }
  
-// export default Count;
+// export default Counter;
