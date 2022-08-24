@@ -9,7 +9,7 @@ const myname = <strong>Mic</strong>
   return (
     <div className="flex justify-center flex-col items-center">
       <Hello />
-      <Welcome name = "John" age = {25}/>
+      <Welcome name = "John" age = {17}/>
     </div>
   );
 };
