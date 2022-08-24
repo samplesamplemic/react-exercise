@@ -2,7 +2,7 @@ export const Welcome = (props) => {
     return (
         <>
             <p className="text-l flex items-center">Welcome, {props.name}!</p>
-            <Age age = {props.age} />
+             {props.age >= 18 && <Age age = {props.age} />} {/*conditional rendering */}
         </>
        
     )
