@@ -1,0 +1,7 @@
+When calling setState to increment the counter, should the parameter be a function or an object? Why?
+
+ANSWER: -the parameter should be a function. 
+This because by passing it a callback,
+this call is not made synchronously, 
+so that you canalways have a fresh value of the state.
+||can receives the current state and return the new state||
