@@ -9,26 +9,37 @@ export default class Counter extends React.Component {
   componentDidMount() {
   this.countInt = setInterval(() => {
       this.setState((state) => {
-        if (this.state.count === 10) {
-          //state-05 ex
-          return {
-            count: this.props.initialValue,
-          };
-        } else {
+        // if (this.state.count === 10) {
+        //   //state-05 ex
+        //   return {
+        //     count: this.props.initialValue,
+        //   };
+        // } else {
           return {
             count: state.count + (this.props.incrementAmount ?? 1),
           };
-        }
+       // }
       });
     }, this.props.incrementInterval ?? 1000);
      } 
  
-  
+  componentDidUpdate(){ //lifecycle-03
+   setInterval(() => {
+    this.setState((state) => {
+      if(this.state.count === 10) {
+        return {
+          count: this.props.initialValue,
+        };
+      }
+    })
+   }, this.props.incrementInterval ?? 1000);
+   console.log('work?')
+  }
     
   componentWillUnmount() {
     if(this.countInt) {
       clearInterval(this.countInt);
-      //console.log('work!');
+      console.log('work!');
     }
   }
 
