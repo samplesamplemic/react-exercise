@@ -33,7 +33,6 @@ export default class Counter extends React.Component {
       }
     })
    }, this.props.incrementInterval ?? 1000);
-   console.log('work?')
   }
     
   componentWillUnmount() {

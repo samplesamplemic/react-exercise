@@ -6,16 +6,31 @@ import Counter from "./lifecycle/count";
 
 const myname = <strong>Mic</strong>
 
- const App = () => 
-{
-  return (
-    <div className="flex justify-center flex-col items-center">
+//funciton
+//  const App = () => 
+// {
+//   return (
+//     <div className="flex justify-center flex-col items-center">
+//       <Hello />
+//       <Welcome name = {myname} age = {25}/>
+//       <Counter initialValue={1} incrementAmount={1} incrementInterval={500} />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+//class
+export default class App extends React.Component{
+  render() {
+    return (
+      <>
+       <div className="flex justify-center flex-col items-center">
       <Hello />
       <Welcome name = {myname} age = {25}/>
       <Counter initialValue={1} incrementAmount={1} incrementInterval={500} />
     </div>
-  );
-};
-
-export default App;
-
+      </>
+    )
+  }
+}
