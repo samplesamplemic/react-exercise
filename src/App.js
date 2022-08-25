@@ -3,6 +3,7 @@ import Hello  from './components/components';
 import { Welcome, Age } from "./props/props";
 //import Counter from "./state/count";
 import Counter from "./lifecycle/count";
+import ClickCounter from "./events/countClick";
 
 const myname = <strong>Mic</strong>
 
@@ -14,6 +15,7 @@ const myname = <strong>Mic</strong>
       <Hello />
       <Welcome name = {myname} age = {25}/>
       <Counter initialValue={1} incrementAmount={1} incrementInterval={500} />
+      <ClickCounter />
     </div>
   );
 };
