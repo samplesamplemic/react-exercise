@@ -4,10 +4,10 @@ import React, { useState, useEffect } from "react";
 export default class Counter extends React.Component {
   
  state = { count: this.props.initialValue ?? 0 };
-
+ 
   //lifecycle-01 
   componentDidMount() {
-    setInterval(() => {
+  this.countInt = setInterval(() => {
       this.setState((state) => {
         if (this.state.count === 10) {
           //state-05 ex
@@ -21,10 +21,16 @@ export default class Counter extends React.Component {
         }
       });
     }, this.props.incrementInterval ?? 1000);
-    console.log(this.state.count);
-  }
-    
+     } 
+ 
   
+    
+  componentWillUnmount() {
+    if(this.countInt) {
+      clearInterval(this.countInt);
+      //console.log('work!');
+    }
+  }
 
   render() {
     return (
