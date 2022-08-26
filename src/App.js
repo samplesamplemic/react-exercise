@@ -5,6 +5,7 @@ import { Welcome, Age } from "./props/props";
 import Counter from "./lifecycle/count";
 import ClickCounter from "./events/countClick";
 import ClickTracker from "./events/clicktrack";
+import InteractiveWelcome from "./form/form";
 
 const myname = <strong>Mic</strong>
 
@@ -18,6 +19,7 @@ const myname = <strong>Mic</strong>
       <Counter initialValue={1} incrementAmount={1} incrementInterval={500} />
       <ClickCounter />
       <ClickTracker />
+      <InteractiveWelcome />
     </div>
   );
 };
