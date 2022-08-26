@@ -12,7 +12,7 @@ const myname = <strong>Mic</strong>
  const App = () => 
 {
   return (
-    <div className="flex justify-center flex-col items-center">
+    <div className="flex justify-center flex-col items-center gap-4">
       <Hello />
       <Welcome name = {myname} age = {25}/>
       <Counter initialValue={1} incrementAmount={1} incrementInterval={500} />

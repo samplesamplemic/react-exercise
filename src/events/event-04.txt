@@ -1,0 +1,6 @@
+Modifiy the ClickTracker so that each button contains an image instead of a text. How does this affect the event handler?
+
+ANSWER: e.target and e.currentTarget are different now:
+e.target = <img>;
+e.currentTarget = <button> <img /> </button>,
+cause e.currentTarget refers to the DOM element to which the event handler is attached-

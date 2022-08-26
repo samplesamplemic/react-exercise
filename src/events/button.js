@@ -1,6 +1,8 @@
 const CounterButton = (props) => {
     return ( 
-        <button onClick={props.handleCounterIncrement}>
+        <button onClick={props.handleCounterIncrement}
+        className="bg-slate-400 w-24 rounded-md"
+        >
             Counter: {props.counter}
         </button>
      );
