@@ -6,6 +6,7 @@ import Counter from "./lifecycle/count";
 import ClickCounter from "./events/countClick";
 import ClickTracker from "./events/clicktrack";
 import InteractiveWelcome from "./form/form";
+import Login from "./form/login";
 
 const myname = <strong>Mic</strong>
 
@@ -20,6 +21,7 @@ const myname = <strong>Mic</strong>
       <ClickCounter />
       <ClickTracker />
       <InteractiveWelcome />
+      <Login />
     </div>
   );
 };
