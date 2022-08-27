@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import Hello  from './components/components';
 import { Welcome, Age } from "./props/props";
 //import Counter from "./state/count";
@@ -11,8 +11,12 @@ import Login from "./form/login";
 const myname = <strong>Mic</strong>
 
 //function
- const App = () => 
-{
+ const App = () => { 
+   const[onlogin, setOnlogin] = useState('ehi');
+
+  const onLogin = () => {
+    setOnlogin("work");
+  }
   return (
     <div className="flex justify-center flex-col items-center gap-4">
       <Hello />
@@ -21,7 +25,10 @@ const myname = <strong>Mic</strong>
       <ClickCounter />
       <ClickTracker />
       <InteractiveWelcome />
-      <Login />
+      <Login onLogin={onLogin} /> 
+      <div>
+        {onlogin}
+      </div>
     </div>
   );
 };
