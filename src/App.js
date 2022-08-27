@@ -7,6 +7,7 @@ import ClickCounter from "./events/countClick";
 import ClickTracker from "./events/clicktrack";
 import InteractiveWelcome from "./form/form";
 import Login from "./form/login";
+import UncontrolledLogin from "./form/unconLogin"
 
 const myname = <strong>Mic</strong>
 
@@ -29,6 +30,7 @@ const myname = <strong>Mic</strong>
       <div>
         {onlogin}
       </div>
+      <UncontrolledLogin />
     </div>
   );
 };
