@@ -8,6 +8,7 @@ import ClickTracker from "./events/clicktrack";
 import InteractiveWelcome from "./form/form";
 import Login from "./form/login";
 import UncontrolledLogin from "./form/unconLogin"
+import Colors from "./list/colors";
 
 const myname = <strong>Mic</strong>
 
@@ -31,6 +32,7 @@ const myname = <strong>Mic</strong>
         {onlogin}
       </div>
       <UncontrolledLogin />
+      <Colors />
     </div>
   );
 };

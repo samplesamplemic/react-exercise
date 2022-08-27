@@ -29,7 +29,7 @@ const UncontrolledLogin = () => {
 
   return (
     <>
-      <h3 className="pt-4 border-t-2">Uncontrolled Form</h3>
+      <h3 className="pt-4 border-t-2 text-xl font-bold">Uncontrolled Form</h3>
       <div className="bg-slate-200 rounded-md p-2">
         <form
           action=""
