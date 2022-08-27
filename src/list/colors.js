@@ -6,8 +6,8 @@ const Colors = () => {
             <div>
             <p className="text-xl font-bold pt-4 my-4 border-t-2">Lists</p>
                 <ul>
-                {items.map((color) => 
-                 <li>{color}</li>
+                {items.map((color, index) => 
+                 <li key={index}>{color}</li>
                 )}
                  
                 </ul>

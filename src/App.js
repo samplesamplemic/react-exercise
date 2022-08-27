@@ -8,7 +8,7 @@ import ClickTracker from "./events/clicktrack";
 import InteractiveWelcome from "./form/form";
 import Login from "./form/login";
 import UncontrolledLogin from "./form/unconLogin"
-import Colors from "./list/colors";
+import Colors from "./list/colors2";
 
 const myname = <strong>Mic</strong>
 
