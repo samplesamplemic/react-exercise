@@ -9,8 +9,12 @@ const TodoList = () => {
     console.log(todo); //lists-03 ex
     console.log(document.querySelector('#myId').value); //lists-03 ex
   };
-
+ 
+  useEffect(() => {  //lists-04 ex
+    document.querySelector('#myId').value = '';
+ }, [todo])
   
+ 
   return (
     <>
       <div>
