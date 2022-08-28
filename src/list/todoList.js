@@ -24,11 +24,13 @@ const TodoList = () => {
 
   const handleRemove = (item) => {
     //lists-06 ex
+    
     //let a = document.querySelector('.remove').closest('li');
     //document.querySelector('.remove').closest('li').remove();
     //console.log(a.innerText);
     //setTodo((prev) => [...prev.filter(el =>)])
     //setTodo(todo.filter(el => el )?.[0])
+    
     //console.log(todo);
     const list = [...todo];
     const updateList = list.filter((el) => el.toLowerCase() !== item);
