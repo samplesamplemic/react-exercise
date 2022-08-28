@@ -16,8 +16,21 @@ const TodoList = () => {
   
  const handleReset = (e) => { //lists-05 ex
     e.preventDefault();
-    setTodo('');
+    setTodo([]);
+    console.log(todo);
  }
+
+ const handleRemove = (item) => { //lists-06 ex 
+//    let a = document.querySelector('.remove').closest('li');
+//    document.querySelector('.remove').closest('li').remove();
+//    console.log(a.innerText);
+   //setTodo((prev) => [...prev.filter(el =>)])
+  // setTodo(todo.filter(el => el )?.[0])
+   console.log(todo);
+   const list = [...todo];
+   const updateList = list.filter(el => el.toLowerCase() !== item)
+   setTodo(updateList);
+}
 
   return (
     <>
@@ -41,7 +54,7 @@ const TodoList = () => {
           INS
         </button>
         <button
-          className="bg-slate-200 rounded-md ml-4 p-2"
+          className="bg-slate-200 rounded-md ml-1 p-2"
           type="reset"
           onClick={handleReset}
         >
@@ -51,7 +64,9 @@ const TodoList = () => {
       </div>
       <ul>
         {Array.isArray(todo) ? todo.map((item, index) => (
-          <li key={index + item}>{item}</li>
+          <li key={index + item} className="flex justify-between min-w-[10rem] pt-2 border-t-2">{item} 
+          <button className="text-xl font-bold ml-4 remove" onClick={() => handleRemove(item.toLowerCase())}>X</button>
+          </li>
         )) : null}
        
       </ul>
