@@ -7,7 +7,7 @@ const TodoList = () => {
     e.preventDefault();
     setTodo((prev) => [...prev, document.querySelector("#myId").value]);
     console.log(todo); //lists-03 ex
-    console.log(document.querySelector("#myId").value); //lists-03 ex
+    //console.log(document.querySelector("#myId").value); //lists-03 ex
   };
 
   useEffect(() => {
@@ -19,17 +19,17 @@ const TodoList = () => {
     //lists-05 ex
     e.preventDefault();
     setTodo([]);
-    console.log(todo);
+    //console.log(todo);
   };
 
   const handleRemove = (item) => {
     //lists-06 ex
-    //    let a = document.querySelector('.remove').closest('li');
-    //    document.querySelector('.remove').closest('li').remove();
-    //    console.log(a.innerText);
+    //let a = document.querySelector('.remove').closest('li');
+    //document.querySelector('.remove').closest('li').remove();
+    //console.log(a.innerText);
     //setTodo((prev) => [...prev.filter(el =>)])
-    // setTodo(todo.filter(el => el )?.[0])
-    console.log(todo);
+    //setTodo(todo.filter(el => el )?.[0])
+    //console.log(todo);
     const list = [...todo];
     const updateList = list.filter((el) => el.toLowerCase() !== item);
     setTodo(updateList);
