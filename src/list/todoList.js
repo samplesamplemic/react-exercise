@@ -14,7 +14,11 @@ const TodoList = () => {
     document.querySelector('#myId').value = '';
  }, [todo])
   
- 
+ const handleReset = (e) => { //lists-05 ex
+    e.preventDefault();
+    setTodo('');
+ }
+
   return (
     <>
       <div>
@@ -36,6 +40,14 @@ const TodoList = () => {
         >
           INS
         </button>
+        <button
+          className="bg-slate-200 rounded-md ml-4 p-2"
+          type="reset"
+          onClick={handleReset}
+        >
+          Reset
+        </button>
+        
       </div>
       <ul>
         {Array.isArray(todo) ? todo.map((item, index) => (
