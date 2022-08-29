@@ -61,7 +61,7 @@ const TodoListRender = (props) => {
         </button>
       </div>
       <ul>
-      {props.render(todo, handleRemove)}
+      {props.children(todo, handleRemove)}
      {/* render-props 01 ex */}
         {/* {Array.isArray(todo)
           ? todo.map((item, index) => (

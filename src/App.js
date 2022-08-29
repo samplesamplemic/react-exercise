@@ -38,9 +38,10 @@ const myname = <strong>Mic</strong>
       <Colors />
       <TodoList />
       <Container title='title' />
-      <TodoListRender //render-props-01 ex
+      <TodoListRender //render-props-02 ex
+      >
       
-      render = {(todo, handleRemove) => {
+       {(todo, handleRemove) => {
        
         return (
           <>
@@ -64,7 +65,7 @@ const myname = <strong>Mic</strong>
           </>
         )
       }}
-      ></TodoListRender>
+      </TodoListRender>
     </div>
   );
 };
