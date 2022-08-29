@@ -57,7 +57,12 @@ const handleReset = () => {
         </div>
         <div className= "flex gap-2 justify-around">
         <button //form-03 ex
-        className="bg-slate-200 border border-black rounded-md p-1" 
+
+        //style-03
+        className= {login.password.length < 8 ? "bg-red-600 border border-black rounded-md p-1"
+         : "bg-green-600 border border-black rounded-md p-1 " }
+       
+        //className="bg-slate-200 border border-black rounded-md p-1" 
         disabled={login.username === '' && login.password === '' ? true : false}
         onClick={props.onLogin} //in App
         >
