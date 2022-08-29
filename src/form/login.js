@@ -60,7 +60,7 @@ const handleReset = () => {
 
         //style-03
         className= {login.password.length < 8 ? "bg-red-600 border border-black rounded-md p-1"
-         : "bg-green-600 border border-black rounded-md p-1 " }
+         : "bg-green-600 border border-black rounded-md p-1 "} 
        
         //className="bg-slate-200 border border-black rounded-md p-1" 
         disabled={login.username === '' && login.password === '' ? true : false}

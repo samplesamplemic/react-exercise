@@ -36,7 +36,7 @@ const myname = <strong>Mic</strong>
       <UncontrolledLogin />
       <Colors />
       <TodoList />
-      <Container />
+      <Container title='title' />
     </div>
   );
 };
