@@ -17,3 +17,8 @@ body {
   margin-bottom: 2rem
 }
 
+.welcome {
+  background-color: lightgreen;
+  border: 1px solid lightgrey;
+}
+

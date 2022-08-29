@@ -5,7 +5,7 @@ export class Welcome extends React.Component {
   render() {
     return (
       <>
-        <p className="text-l flex items-center">Welcome, {this.props.name}!</p>
+        <p className="text-l flex items-center welcome">Welcome, {this.props.name}!</p>
         <Age age={this.props.age} />
         {/* {(props.age >= 18) && <Age age = {props.age} />} conditional rendering 01 */}
         {/* {(props.age) && <Age age = {props.age} />} conditional rendering 02*/}
