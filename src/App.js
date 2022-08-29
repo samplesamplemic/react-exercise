@@ -10,6 +10,7 @@ import Login from "./form/login";
 import UncontrolledLogin from "./form/unconLogin"
 import Colors from "./list/colors2";
 import TodoList from "./list/todoList";
+import Container from "./Composition/container";
 
 const myname = <strong>Mic</strong>
 
@@ -35,6 +36,7 @@ const myname = <strong>Mic</strong>
       <UncontrolledLogin />
       <Colors />
       <TodoList />
+      <Container />
     </div>
   );
 };
