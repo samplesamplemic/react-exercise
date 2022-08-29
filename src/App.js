@@ -11,11 +11,12 @@ import UncontrolledLogin from "./form/unconLogin"
 import Colors from "./list/colors2";
 import TodoList from "./list/todoList";
 import Container from "./Composition/container";
+import TodoListRender from "./Composition/todoList"
 
 const myname = <strong>Mic</strong>
 
 //function
- const App = () => { 
+ const App = (props) => { 
    const[onlogin, setOnlogin] = useState('ehi');
 
   const onLogin = () => {
@@ -37,6 +38,33 @@ const myname = <strong>Mic</strong>
       <Colors />
       <TodoList />
       <Container title='title' />
+      <TodoListRender //render-props-01 ex
+      
+      render = {(todo, handleRemove) => {
+       
+        return (
+          <>
+
+          {Array.isArray(todo)
+          ? todo.map((item, index) => (
+              <li
+                key={index + item}
+                className="flex justify-between min-w-[10rem] pt-2 border-t-2"
+              >
+                {item}
+                <button
+                  className="text-xl font-bold ml-4 remove"
+                  onClick={() => handleRemove(item.toLowerCase())}
+                >
+                  X
+                </button>
+              </li>
+            ))
+          : null} 
+          </>
+        )
+      }}
+      ></TodoListRender>
     </div>
   );
 };
