@@ -12,6 +12,8 @@ import Colors from "./list/colors2";
 import TodoList from "./list/todoList";
 import Container from "./Composition/container";
 import TodoListRender from "./Composition/todoList"
+import { LanguageContext } from "./Composition/LanguageContext";
+import DisplayLanguage from "./Composition/DisplayLanguage";
 
 const myname = <strong>Mic</strong>
 
@@ -22,6 +24,15 @@ const myname = <strong>Mic</strong>
   const onLogin = () => {
     setOnlogin("work");
   }
+
+  //context-01
+  const [lang, setLang] = useState('');
+
+const handleLangChange = (e) => {
+ setLang(e.target.value)
+}
+
+
   return (
     <div className="flex justify-center flex-col items-center gap-4">
       <Hello />
@@ -65,6 +76,15 @@ const myname = <strong>Mic</strong>
         )
       }}
       ></TodoListRender>
+      {/* context-01 ex */}
+      <select name="" value={lang} onChange={handleLangChange}>
+                <option value="en">EN</option>
+                <option value="it">IT</option>
+
+            </select>
+      <LanguageContext.Provider value={lang}>
+        <DisplayLanguage />
+      </LanguageContext.Provider>
     </div>
   );
 };
