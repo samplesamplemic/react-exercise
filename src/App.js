@@ -93,7 +93,7 @@ const handleLangChange = (e) => {
       
        <div className="pt-4 mt-4 border-t-2 flex flex-col  text-center">{/* function-components ex */}
          <h1 className="text-xl font-bold">Function Components</h1>       
-        <Sum num={[1, 2, 3, 4]}/>
+        <Sum />
       </div>
     </div>
   );

@@ -1,0 +1,7 @@
+What happens if the numbers prop of the Sum component is not set? How can you set a default value for this prop?
+
+ANSWER: if num is unset the value returned is undefined and return an error:
+ 'Uncaught TypeError: Cannot read properties of undefined (reading 'reduce')';
+ Could set a default value instead of props by writing something like:
+  ({num=[1, 2, 3, 4]}),
+   
