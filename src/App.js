@@ -14,6 +14,7 @@ import Container from "./Composition/container";
 import TodoListRender from "./Composition/todoList"
 import { LanguageContext } from "./Composition/LanguageContext";
 import DisplayLanguage from "./Composition/DisplayLanguage";
+import Sum from "./Function/Sum";
 
 const myname = <strong>Mic</strong>
 
@@ -88,6 +89,11 @@ const handleLangChange = (e) => {
         <DisplayLanguage />
       </LanguageContext.Provider>
 
+      </div>
+      
+       <div className="pt-4 mt-4 border-t-2 flex flex-col  text-center">{/* function-components ex */}
+         <h1 className="text-xl font-bold">Function Components</h1>       
+        <Sum num={[1, 2, 3, 4]}/>
       </div>
     </div>
   );
