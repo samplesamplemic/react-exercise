@@ -77,6 +77,8 @@ const handleLangChange = (e) => {
       }}
       ></TodoListRender>
       {/* context-01 ex */}
+      <div className="flex gap-4 flex-wrap justify-center">
+      <p className="text-l font-semibold basis-full text-center border-t-2 ">Context</p>
       <select name="" value={lang} onChange={handleLangChange}>
                 <option value="en">EN</option>
                 <option value="it">IT</option>
@@ -85,6 +87,8 @@ const handleLangChange = (e) => {
       <LanguageContext.Provider value={lang}>
         <DisplayLanguage />
       </LanguageContext.Provider>
+
+      </div>
     </div>
   );
 };
