@@ -16,6 +16,7 @@ import { LanguageContext } from "./Composition/LanguageContext";
 import DisplayLanguage from "./Composition/DisplayLanguage";
 import Sum from "./Function/Sum";
 import ClickCounterFun from "./Function/ClickCounter";
+import CounterFun from "./Function/Counter";
 
 const myname = <strong>Mic</strong>
 
@@ -97,6 +98,7 @@ const handleLangChange = (e) => {
         <Sum />
       </div>
       <ClickCounterFun />
+      <CounterFun />
     </div>
   );
 };
