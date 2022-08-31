@@ -15,6 +15,7 @@ import TodoListRender from "./Composition/todoList"
 import { LanguageContext } from "./Composition/LanguageContext";
 import DisplayLanguage from "./Composition/DisplayLanguage";
 import Sum from "./Function/Sum";
+import ClickCounterFun from "./Function/ClickCounter";
 
 const myname = <strong>Mic</strong>
 
@@ -95,6 +96,7 @@ const handleLangChange = (e) => {
          <h1 className="text-xl font-bold">Function Components</h1>       
         <Sum />
       </div>
+      <ClickCounterFun />
     </div>
   );
 };
