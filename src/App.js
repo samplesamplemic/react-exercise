@@ -17,6 +17,7 @@ import DisplayLanguage from "./Composition/DisplayLanguage";
 import Sum from "./Function/Sum";
 import ClickCounterFun from "./Function/ClickCounter";
 import CounterFun from "./Function/Counter";
+import GithubUser from "./Function/GithubUser";
 
 const myname = <strong>Mic</strong>
 
@@ -99,6 +100,7 @@ const handleLangChange = (e) => {
       </div>
       <ClickCounterFun />
       <CounterFun />
+      <GithubUser username='samplesamplemic'/>
     </div>
   );
 };

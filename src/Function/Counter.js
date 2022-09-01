@@ -7,13 +7,21 @@ const CounterFun = () => {
   useEffect(() => {
     const interval = setInterval(() => //mount
     {setCount((prev)=> prev+1)},1000)
-    
+    console.log('component mount'); 
+
     return () => { //unmount
-        clearInterval(interval)
+      clearInterval(interval)
+      console.log('component unmount')
+      
     }
 
   }, [])
 
+  // useEffect(() => {
+  //   if(count > 10) {
+  //     setCount(0)
+  //   }
+  // },[count])
 
     return (  
         <>

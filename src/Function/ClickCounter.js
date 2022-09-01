@@ -12,6 +12,13 @@ const ClickCounterFun = () => {
        onCounterChange();
      }, [count])
        
+useEffect(() => {
+  console.log(`count is: ${count}`);
+
+  return () => {
+  console.log(`the count was: ${count}`);
+  }
+}, [count])
 
    return ( 
            <>
