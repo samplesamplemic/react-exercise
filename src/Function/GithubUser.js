@@ -40,7 +40,7 @@ const GithubUser = () => { //useeffect-04 ex
   });
 
   const handleUser = () => {
-   const user = document.querySelector(".username").value;
+   const user = document.querySelector(".username").value; //used this instead of input cause of the limit num of api calls
     //console.log(user)
     //console.log(input);
     setUsers({ usersList: [...users.usersList, input], user: user });
@@ -48,6 +48,8 @@ const GithubUser = () => { //useeffect-04 ex
 
   useEffect(() => {
     console.log(users);
+    //here modify users, like duplicate ecc..?
+    //maybe in <li>
   }, [users]);
 
   return (
