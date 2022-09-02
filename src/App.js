@@ -19,6 +19,7 @@ import ClickCounterFun from "./Function/ClickCounter";
 import CounterFun from "./Function/Counter";
 import GithubUser from "./Function/GithubUser";
 import {HookCounter}  from "./Function/custom_hooks/HookCounter";
+import HookForm from "./Function/custom_hooks/HookForm";
 
 const myname = <strong>Mic</strong>
 
@@ -103,6 +104,7 @@ const handleLangChange = (e) => {
       <CounterFun />
       <GithubUser username='samplesamplemic'/>
       <HookCounter />
+      <HookForm />
     </div>
   );
 };
