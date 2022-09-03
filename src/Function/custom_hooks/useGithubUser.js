@@ -5,9 +5,8 @@ const useGithubUser = (username) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    useEffect(() => {
-        (
-             async function(username) {
+    
+             async function fetchGithubUser(username) {
                 try {
                     setLoading(true);
                     const reponse = await fetch(`https://api.github.com/users/${username}`);
@@ -19,11 +18,15 @@ const useGithubUser = (username) => {
                     setLoading(false);
                 }
 
-            })()
-    }, [username])
+            }
+
+           useEffect(() => {
+            fetchGithubUser(username)
+           },[username])
 
 
-    return { data, error, loading }
+    return { data, error, loading, fetchGithubUser} //custom-hook-04 ex
 }
 
 export default useGithubUser;
+
