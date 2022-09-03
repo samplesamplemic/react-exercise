@@ -69,7 +69,8 @@ const GithubUser = () => { //useeffect-04 ex
       >
         INS
       </button>
-      <GithubUserList username={users.user} />
+      {users.user ? <GithubUserList username={users.user} /> : <GithubUserList username='samplesamplemic' /> }
+      
 
       <p className="pt-2 mt-4 border-t-2 border-black">Previous research</p>
       <ul>

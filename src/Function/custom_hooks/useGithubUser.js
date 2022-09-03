@@ -12,6 +12,9 @@ const useGithubUser = (username) => {
                     const reponse = await fetch(`https://api.github.com/users/${username}`);
                     const data = await reponse.json();
                     setData(data);
+                    if(reponse.status !== 200){
+                        setError(new Error("User not found"))
+                    }
                 } catch (err) {
                     setError(err)
                 } finally {
