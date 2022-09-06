@@ -21,6 +21,7 @@ import GithubUser from "./Function/GithubUser";
 import {HookCounter}  from "./Function/custom_hooks/HookCounter";
 import HookForm from "./Function/custom_hooks/HookForm";
 import HookPosition from "./Function/custom_hooks/useCurrentLocation";
+import FilteredList from "./Function/custom_hooks/FilteredList";
 
 const myname = <strong>Mic</strong>
 
@@ -107,6 +108,7 @@ const handleLangChange = (e) => {
       <HookCounter />
       <HookForm />
       <HookPosition />
+      <FilteredList />
     </div>
   );
 };
