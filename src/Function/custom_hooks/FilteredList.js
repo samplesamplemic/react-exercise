@@ -14,7 +14,13 @@ const FilteredList = () => {
 
   const memoList = useMemo(() => filtered(), [list]);
 
-  return <>{memoList}</>;
+  return (
+
+    <>
+    <h2 className="text-lg font-semibold pt-6 pb-2 border-t-2 ">Filter User (useMemo)</h2>
+    {memoList}
+    </>
+  ) 
 };
 
 export default FilteredList;
