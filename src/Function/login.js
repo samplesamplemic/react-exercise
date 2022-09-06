@@ -1,7 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 //usestate-02 ex
 const Login = (props) => {
+  
+  //useRef-01
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus()
+  }, [])
+  
+
   const [login, setLogin] = useState({
     username: "",
     password: "",
@@ -35,6 +44,7 @@ const handleReset = () => {
           onChange={handleChange}
           placeholder="name"
           className="bg-slate-200"
+          ref={inputRef}
         />
         <input
           type="password"

@@ -9,9 +9,9 @@ const UncontrolledLogin = () => {
   // }
 
   //function solution forms-6 ex
-  useEffect(() => {
-    formRef.current.elements.username.focus();
-  }, []);
+  // useEffect(() => {
+  //   formRef.current.elements.username.focus();
+  // }, []);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
