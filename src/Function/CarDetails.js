@@ -6,7 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 const CarDetails = () => {
  
     let initialData = {
-        model: 'Fiat Pandas',
+        model: 'Fiat Panda',
          year: '2000',
          color: 'white'
      };
@@ -30,8 +30,8 @@ const CarDetails = () => {
 
   useEffect(() => {
     console.log('work');
-    inputRef.current.value = '';
-  },[inputRef])
+    inputRef.current.reset();
+   },[inputRef])
 
  
 
@@ -41,11 +41,13 @@ const CarDetails = () => {
         onSubmit={handleSubmit}
         ref={inputRef}
         >
-            <div>
-                <input type="text" name='model' placeholder="model" defaultValue={initialData.model} />
-                <input type="text" name='year' placeholder="year"  defaultValue={initialData.year}  />
-                <input type="text" name='color' placeholder="color"  defaultValue={initialData.color} />
-                <button type="submit">Submit</button>
+        <h2 className="text-lg font-semibold pt-6 pb-2 border-t-2 text-center ">Car Details</h2>
+              
+            <div className='flex gap-4'>
+              <input className="border-b-2 border-black" type="text" name='model' placeholder="model" defaultValue={initialData.model} />
+                <input className="border-b-2 border-black" type="text" name='year' placeholder="year"  defaultValue={initialData.year}  />
+                <input className="border-b-2 border-black" type="text" name='color' placeholder="color"  defaultValue={initialData.color} />
+                <button className="border-2 border-black rounded-md" type="submit">Submit</button>
             </div>
 
         </form>
