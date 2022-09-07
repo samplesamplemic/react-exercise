@@ -1,5 +1,4 @@
 import {Routes, Route} from 'react-router-dom';
-import Counter from '../lifecycle/count';
 import { Welcome } from '../props/props';
 
 const App2 = () => {
