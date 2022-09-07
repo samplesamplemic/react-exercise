@@ -1,5 +1,6 @@
 import {Routes, Route} from 'react-router-dom';
 import { Welcome } from '../props/props';
+import Counter from '../state/count';
 
 const App2 = () => {
     return (
@@ -8,6 +9,7 @@ const App2 = () => {
         
         <Routes>
             <Route  path ='/' element={<Welcome name='mic2' />}  />
+            <Route path='/counter' element={<Counter />} />
         </Routes>
 
         </div> 

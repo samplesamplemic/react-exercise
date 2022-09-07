@@ -11,7 +11,7 @@ export default class Counter extends React.Component {
         if (this.state.count === 10) {
           //state-05 ex
           return {
-            count: this.props.initialValue,
+            count: (this.props.initialValue ?? 1),
           };
         } else {
           return {
