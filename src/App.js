@@ -14,6 +14,7 @@ import Container from "./Composition/container";
 import TodoListRender from "./Composition/todoList"
 import { LanguageContext } from "./Composition/LanguageContext";
 import DisplayLanguage from "./Composition/DisplayLanguage";
+import DisplayLanguage2 from './Function/DisplayLanguage';
 import Sum from "./Function/Sum";
 import ClickCounterFun from "./Function/ClickCounter";
 import CounterFun from "./Function/Counter";
@@ -95,7 +96,8 @@ const handleLangChange = (e) => {
             </select>
       <LanguageContext.Provider value={lang}>
         <DisplayLanguage />
-      </LanguageContext.Provider>
+      </LanguageContext.Provider> 
+      <DisplayLanguage2 />
 
       </div>
       
