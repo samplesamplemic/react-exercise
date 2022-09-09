@@ -5,6 +5,7 @@ import { Welcome } from "../props/props";
 import Counter from "../state/count";
 import NotFound from "./NotFound";
 import ShowGithubUser from "./ShowGithubUser";
+import GithubUserswr from "./swr/GithubUser_swr";
 
 const App2 = () => {
   //let user = 'samplesamplemic';
@@ -23,7 +24,7 @@ const App2 = () => {
              <Route index element={<p>Add a user and select it</p>} />
              <Route path=":username" element={<ShowGithubUser />} />
         </Route>
-        <Route path="*" element={<NotFound />} /> react-router-05
+        <Route path="*" element={<NotFound />} />  {/* react-router-05 */}
       </Routes>
       <div className=" flex flex-wrap justify-center gap-4 mt-4 border-t-2 text-lg font-semibold text-blue-600  ">
         <h2 className="basis-full text-black">Links</h2>
