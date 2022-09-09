@@ -3,10 +3,12 @@ import useSWR from 'swr';
 const fetcher = url => fetch(url).then(response => response.json());
 
 const GithubUserswr = (username) => {
-   const { data, error  } = useSWR(`https://api.github.com/users/${username}`, fetcher)
-  console.log(data);
-     
-  return  {data, error};
+  
+      const { data, error  } = useSWR(`https://api.github.com/users/${username}`, fetcher)
+     console.log(data);
+         return  {data, error};
+   
+   
      
    //( 
    //      <>
