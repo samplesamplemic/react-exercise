@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Router, Routes, Route, Link, useParams } from "react-router-dom";
+import { Router, Routes, Route, Link, useParams, Outlet } from "react-router-dom";
 import ShowGithubUser from "../Libreries/ShowGithubUser";
 import GithubUserList from "./GithubUserList";
 
@@ -77,8 +77,8 @@ const GithubUser = () => { //useeffect-04 ex
       {/* {users.user ? <GithubUserList username={users.user} /> : <GithubUserList username='samplesamplemic' /> }
        */}
           {/* <GithubUserList username={username} />  */}
-          <ShowGithubUser username={username} /> 
-      <p className="pt-2 mt-4 border-t-2 border-black">Click to research</p>
+           
+      <p className="pt-2 mt-4 border-t-2 border-black"></p>
       <ul>
         {users &&
           users.usersList.map((item, index) => {
@@ -88,9 +88,15 @@ const GithubUser = () => { //useeffect-04 ex
                 {/* {item} */}
                 <Link to={`/users/${item}`}>{item}</Link>
               </li>
+            
             );
           })}
+      
       </ul>
+      <hr />
+      <Outlet />
+      
+
     </div>
   );
 };

@@ -20,7 +20,8 @@ const App2 = () => {
         <Route path="/counter" element={<Counter />} />
         {/* <Route path={`/users/:username`} element={<ShowGithubUser />} /> */}
         <Route path="/users" element={<GithubUser />}>
-            <Route path="/users/:username" element={<ShowGithubUser />} />
+             <Route index element={<p>Add a user and select it</p>} />
+             <Route path=":username" element={<ShowGithubUser />} />
         </Route>
         <Route path="*" element={<NotFound />} /> react-router-05
       </Routes>
