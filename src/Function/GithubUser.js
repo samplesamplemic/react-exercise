@@ -48,7 +48,7 @@ const GithubUser = () => { //useeffect-04 ex
    const user = document.querySelector(".username").value; //used this instead of input cause of the limit num of api calls
    //console.log(user)
    //console.log(input);
-   if(input.length > 0) {
+   if(input.length > 0) { //swr-02
       setUsers({ usersList: [...users.usersList, input], user: user })
    }
     
