@@ -5,7 +5,7 @@ import Counter from '../state/count';
 import ShowGithubUser from './ShowGithubUser';
 
 const App2 = () => {
-    let user = 'samplesamplemic';
+    //let user = 'samplesamplemic';
     //const [user, setUser] = useState('');setUser((e) => e.target.value)
     return (
         <div className="flex text-center flex-col">
@@ -13,7 +13,7 @@ const App2 = () => {
         <Routes>
             <Route  path ='/' element={<Welcome name='mic2' />}  />
             <Route path='/counter' element={<Counter />} />
-            <Route path={`/users/:${user}`} element={<ShowGithubUser username={user} />} /> 
+            <Route path={`/users/:username`} element={<ShowGithubUser />} /> 
          </Routes>
 
         </div> 

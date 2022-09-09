@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
-import {Routes, Route, Link} from 'react-router-dom';
+import {Routes, Route, Link, useParams} from 'react-router-dom';
 import GithubUserList from '../Function/GithubUserList';
 
 
 const ShowGithubUser = (props) => {
-    
+    const {username } = useParams();
 
     return ( 
         <>
-            <GithubUserList username={props.username}/>
+            <GithubUserList username={username}/>
         </>
      );
 }
