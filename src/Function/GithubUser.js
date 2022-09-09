@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Router, Routes, Route, Link, useParams } from "react-router-dom";
+import ShowGithubUser from "../Libreries/ShowGithubUser";
 import GithubUserList from "./GithubUserList";
 
 //useeffect-ex 03
@@ -33,6 +35,9 @@ import GithubUserList from "./GithubUserList";
 
 
 const GithubUser = () => { //useeffect-04 ex
+
+  const {username } = useParams(); //react-router-06
+
    const [input, setInput] = useState("");
    let [users, setUsers] = useState({
     user: '',
@@ -60,7 +65,7 @@ const GithubUser = () => { //useeffect-04 ex
         className="username bg-transparent mr-4 p-2 border-b-2 border-black"
         placeholder="username"
       />
-
+        
       <button
         className="float-right p-2 border-2 border-black rounded-md"
         onClick={() => {
@@ -69,16 +74,19 @@ const GithubUser = () => { //useeffect-04 ex
       >
         INS
       </button>
-      {users.user ? <GithubUserList username={users.user} /> : <GithubUserList username='samplesamplemic' /> }
-      
-
-      <p className="pt-2 mt-4 border-t-2 border-black">Previous research</p>
+      {/* {users.user ? <GithubUserList username={users.user} /> : <GithubUserList username='samplesamplemic' /> }
+       */}
+          {/* <GithubUserList username={username} />  */}
+          <ShowGithubUser username={username} /> 
+      <p className="pt-2 mt-4 border-t-2 border-black">Click to research</p>
       <ul>
         {users &&
           users.usersList.map((item, index) => {
             return (
+              
               <li className="my-2 list-decimal list-inside" key={index + item}>
-                {item}
+                {/* {item} */}
+                <Link to={`/users/${item}`}>{item}</Link>
               </li>
             );
           })}
