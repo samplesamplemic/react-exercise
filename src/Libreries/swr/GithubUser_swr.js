@@ -1,10 +1,11 @@
 import useSWR from 'swr';
 
-const fetcher = url => fetch(url).then(response => response.json());
+//const fetcher = url => fetch(url).then(response => response.json());
+//swr-04 is in index.js file
 
 const GithubUserswr = (username) => {
   
-      const { data, error, mutate  } = useSWR(`https://api.github.com/users/${username}`, fetcher)
+      const { data, error, mutate  } = useSWR(`https://api.github.com/users/${username}`)
      console.log(data);
      function handleRefreshUser() {
       mutate()
