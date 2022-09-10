@@ -4,9 +4,13 @@ const fetcher = url => fetch(url).then(response => response.json());
 
 const GithubUserswr = (username) => {
   
-      const { data, error  } = useSWR(`https://api.github.com/users/${username}`, fetcher)
+      const { data, error, mutate  } = useSWR(`https://api.github.com/users/${username}`, fetcher)
      console.log(data);
-         return  {data, error};
+     function handleRefreshUser() {
+      mutate()
+     }
+     
+         return  {data, error, onRefresh: handleRefreshUser };
    
    
      
