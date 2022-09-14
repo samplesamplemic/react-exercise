@@ -5,6 +5,7 @@ import {SWRConfig} from 'swr';
 import { store } from './Redux/Store';
 import { incrementCounter } from './Redux/CounterReducer.js';
 import './index.css';
+import { addItem, editItem, removeItem } from './Redux/TodosReducer.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -28,3 +29,7 @@ store.subscribe(() => {
 
 store.dispatch(incrementCounter(4))
 store.dispatch(incrementCounter(4))
+
+store.dispatch(addItem({id: 1, title: 'shopping', completed: false}))
+store.dispatch(editItem({id: 1, title: 'out of money', completed: false}))
+store.dispatch(removeItem({id: 1, title: 'shopping', completed: false}))

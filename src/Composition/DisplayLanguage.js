@@ -14,7 +14,7 @@ const DisplayLanguage = (props) => {
                 return (
              <h1
              className="text-2xl font-bold pl-4 border-l-2 "
-             >{lange[lang]}</h1>
+             >{lange[lang]}</h1> 
 
                 )
             }}
