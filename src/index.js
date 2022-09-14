@@ -22,7 +22,7 @@ root.render(
 );
 
 //redux-02
-store.subscribe(() => {
+store.subscribe(() => { //redux-05
    console.log(store.getState());
 
 })
