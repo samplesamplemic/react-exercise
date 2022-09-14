@@ -4,6 +4,8 @@ import { todosReducer } from './TodosReducer';
 
 
 //export const store = createStore(counterReducer);
+
+//redux-04
 const rootReducer = combineReducers({
     counter: counterReducer,
     todos: todosReducer
