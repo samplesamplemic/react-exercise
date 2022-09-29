@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import GithubUserswr from "../Libreries/swr/GithubUser_swr";
+import useGithubUser from "./custom_hooks/useGithubUser";
 
 const GithubUserList = ({ username, input }) => {
 
-  const {data, error} = GithubUserswr(username) //swr-01
+  const {data, error, loading} = useGithubUser(username) //swr-01
 
 
   // const [data, setData] = useState(null);
@@ -56,7 +57,7 @@ return (
   <div className="flex gap-4 items-end mt-4">
 
     Github Info: <>
-       {!data && !error && <h2>Loading...</h2>}
+       {loading && <h3>Loading...</h3> }
        {error && <h3>An error has occurred</h3>}
         {data && !error && 
           <>
