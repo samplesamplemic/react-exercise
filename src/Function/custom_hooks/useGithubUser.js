@@ -3,8 +3,8 @@ import useSWR from 'swr';
 
 const fetcher = url => fetch(url).then(response => response.json());
 
-const useGithubUser = (username) => {
-   const { data, error, mutate  } = useSWR(`https://api.github.com/users/${username}`, fetcher)
+const useGithubUser = (username) => {      //swr-02
+   const { data, error, mutate  } = useSWR(username ? `https://api.github.com/users/${username}`: null, fetcher)
   console.log(data);
   function handleRefreshUser() {
     mutate()
