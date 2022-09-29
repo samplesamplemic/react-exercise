@@ -52,3 +52,25 @@ export function todosReducer(state = defaultState, action) {
         }
     }
 }
+
+//TOOLKIT REDUX <createSlice>
+// export const todo = createSlice({
+//     name: 'todos',
+//     initialState: [],
+//     reducers: {
+//         add: (state, action) => {
+//             state.push(action.payload)
+//         },
+//         remove: (state, action) => {
+//             state.filter(todo => todo.id !== action.payload.id)
+//         },
+//         edit: (state, action) => {
+//             const {id, data} = action.payload
+//             const todo = state.find(todo => todo.id === id)
+
+//             for(let key in data) {
+//                 todo[key] = data[key]
+//             }
+//         }
+//     }
+// })
