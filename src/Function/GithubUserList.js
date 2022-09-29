@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import GithubUserswr from "../Libreries/swr/GithubUser_swr";
+import useGithubUser from "./custom_hooks/useGithubUser";
 
 const GithubUserList = ({ username, input }) => {
 
-  const {data, error, onRefresh} = GithubUserswr(username) //swr-01
+  //const {data, error, onRefresh} = GithubUserswr(username) //swr-01
+  const {data, error, loading, onRefresh} = useGithubUser(username) //swr-01
 
 
   // const [data, setData] = useState(null);
@@ -58,7 +60,7 @@ return (
  
     {/* swr-03 */}  <button className="p-2 rounded-md border-2 border-black" onClick={onRefresh}>Refresh</button>
     Github Info: <>
-       {!data && !error && <h2>Loading...</h2>}
+       {loading && <h3>Loading...</h3> }
        {error && <h3>An error has occurred</h3>}
         {data && !error && 
           <>
